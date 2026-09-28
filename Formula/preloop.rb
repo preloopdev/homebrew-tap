@@ -1,35 +1,35 @@
 class Preloop < Formula
   desc "Preloop CI command-line interface"
   homepage "https://github.com/preloopdev/preloop"
-  version "0.33.6"
+  version "0.33.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.33.6/preloop-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "2bb1c0d614eee9aa65dd3c7ba319e4c5b012b8c8cab38bf68683b18478c08843"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.33.7/preloop-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "de69831cb41d4e8001468689f0a8f5c3ff8b77a09f7338647df65d1778b22be0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.33.6/preloop-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "a1e80ccb6d97b5cbc876b46e753107616cfb9ad873b8a9076aa3035b7672281a"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.33.7/preloop-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "9ea73197a9225e8e9d720d8b900cdab7dc6f6303c5c3dd39ae00818e2abca5ca"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.33.6/preloop-cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c5eefc8ba32ce7a89c79cdce520ec559f8961b9dab14cc5e139b874721297237"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.33.7/preloop-cli-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0cd5390aa80a8fda1b3cf26fc67e2e8c2e6fd752ea198f543e9583aea1ee4d7b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.33.6/preloop-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2dde563f100c4fa90aebffd2d885036bb3a2e108551cbe644695e266772fb618"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.33.7/preloop-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "cb2e99f32415edb7e05994c3056e5933e1ff257613f34d6fcba57aabdf19d487"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
