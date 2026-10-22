@@ -1,25 +1,25 @@
 class Preloop < Formula
   desc "Preloop CI command-line interface"
   homepage "https://github.com/preloopdev/preloop"
-  version "0.35.5"
+  version "0.35.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.35.5/preloop-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "95029693d711ea5aafd75c6f995e19e27d4be0bc389e8d1c035ec1a448ca2380"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.35.6/preloop-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "0727e926fda8fa8a3bcab2135a39764480eb94a5dda733939a02eeffbd44b3ff"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.35.5/preloop-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "26f205382d91f5906b9bd6f49b8dd56c8472c417f8189ae6a88c1b5c40f3e606"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.35.6/preloop-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "4c125d8271a431333417bcdc6194b93697143870078c53ff92a23e1ad94b7c90"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.35.5/preloop-cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "25047fc77e888e354767fac7057ec8efa0f063bb9c634873bec4b1f53bfbda34"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.35.6/preloop-cli-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a68f05d18d0eb840c235dc3f1c3e526e32ee26deb7fdb7d846b10d91a07157ec"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/preloopdev/preloop/releases/download/v0.35.5/preloop-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6a81580b6d3756e6205c67d3d0de3331ad59c114891bb29b9c265e82bef2d6eb"
+      url "https://github.com/preloopdev/preloop/releases/download/v0.35.6/preloop-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a5a75d8e15579b0cc86c29aa33601bd5aeb60b7cd5e4052de32522ed528be4b0"
     end
   end
   license "MIT"
